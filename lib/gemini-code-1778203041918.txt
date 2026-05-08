@@ -1,0 +1,44 @@
+lib/
+├── core/                   # অ্যাপের মেইন কনফিগারেশন
+│   ├── app_route.dart      # রাউটিং ম্যানেজমেন্ট
+│   ├── dependency.dart     # ডিপেন্ডেন্সি ইনজেকশন (GetX/Provider)
+│   ├── language/           # মাল্টি-ল্যাঙ্গুয়েজ সাপোর্ট
+│   └── utils/              # কনস্ট্যান্ট এবং ইউটিলিটি
+│       ├── app_colors.dart
+│       ├── app_constants.dart
+│       ├── app_icons.dart
+│       ├── app_images.dart
+│       └── static_strings.dart
+│
+├── data/                   # ডাটা লেয়ার (API এবং লোকাল স্টোরেজ)
+│   ├── services/           # API ক্লায়েন্ট এবং সকেট সার্ভিস
+│   │   ├── api_client.dart
+│   │   └── socket_service.dart
+│   ├── helpers/            # নেটওয়ার্ক এবং লোকাল শেয়ার্ড প্রিফারেন্স
+│   │   ├── shared_prefe.dart
+│   │   └── network_info.dart
+│   └── models/             # গ্লোবাল ডাটা মডেল
+│
+├── global/                 # পুরো অ্যাপে ব্যবহৃত কমন কম্পোনেন্ট
+│   ├── controllers/        # গ্লোবাল কন্ট্রোলার (যেমন: AuthController)
+│   ├── widgets/            # কমন উইজেট (CustomButton, CustomTextField)
+│   └── theme/              # অ্যাপ থিম (Light/Dark)
+│
+└── view/                   # ইউজার ইন্টারফেস (UI)
+    ├── screens/            # প্রতিটি ফিচারের জন্য আলাদা ফোল্ডার
+    │   ├── splash/         # স্প্ল্যাশ স্ক্রিন ফিচার
+    │   │   ├── controller/ # splash_controller.dart
+    │   │   ├── screen/     # splash_screen.dart
+    │   │   └── widgets/    # splash_specific_widgets.dart
+    │   │
+    │   ├── booking/        # বুকিং ফিচার
+    │   │   ├── controller/
+    │   │   ├── screen/
+    │   │   └── widgets/
+    │   │
+    │   └── auth/           # লগইন/রেজিস্ট্রেশন ফিচার
+    │       ├── controller/
+    │       ├── screen/
+    │       └── widgets/
+    │
+    └── common_widgets/     # ছোট ছোট রিপিটেবল উইজেট (Toast, Dialog)
