@@ -1,10 +1,13 @@
-# group_saving_app
+# Group Saving App
 
-A new Flutter project.
+A Flutter project for group savings with AI integration.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
+## New Features
+- **Sign Up Screen**: Beautifully designed sign-up flow.
+- **Custom UI Components**: Reusable `CustomTextField` and `CustomButton`.
+- **GetX Integration**: Set up for navigation and state management.
+- **Modern Typography**: Integrated Google Fonts (Poppins).
+- **Theming**: Custom color palette for a premium look.
 
 A few resources to get you started if this is your first Flutter project:
 
