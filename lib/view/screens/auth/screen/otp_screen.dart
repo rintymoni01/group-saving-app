@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:group_saving_app/core/utils/app_colors.dart';
+import 'package:group_saving_app/view/common_widgets/custom_button.dart';
+import 'package:group_saving_app/view/screens/profile/screen/complete_profile_screen.dart';
 
 class OtpScreen extends StatelessWidget {
   final String email;
@@ -64,6 +66,36 @@ class OtpScreen extends StatelessWidget {
             ),
             
             const SizedBox(height: 40),
+            
+            // Confirm OTP Button
+            CustomButton(
+              text: 'Confirm OTP',
+              onPressed: () {
+                Get.to(() => const CompleteProfileScreen());
+              },
+              borderRadius: 30,
+            ),
+            
+            const SizedBox(height: 24),
+            
+            // Back to Email
+            TextButton(
+              onPressed: () => Get.back(),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Icon(Icons.arrow_back, size: 16, color: Colors.grey),
+                  const SizedBox(width: 8),
+                  Text(
+                    'Back to Email',
+                    style: GoogleFonts.poppins(
+                      color: Colors.grey,
+                      fontSize: 16,
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
