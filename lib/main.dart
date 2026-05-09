@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:group_saving_app/core/utils/app_colors.dart';
-import 'package:group_saving_app/view/screens/auth/screen/sign_up_screen.dart';
+import 'package:group_saving_app/view/screens/auth/sign_up/screen/sign_up_screen.dart';
 
 void main() {
   runApp(const MyApp());
