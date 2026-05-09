@@ -54,6 +54,49 @@ class CompleteProfileScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 32),
+            // Profile Picture Section
+            Stack(
+              children: [
+                Container(
+                  width: 100,
+                  height: 100,
+                  decoration: BoxDecoration(
+                    color: Colors.grey[200],
+                    shape: BoxShape.circle,
+                  ),
+                  child: const Icon(
+                    Icons.person_outline,
+                    size: 50,
+                    color: Colors.grey,
+                  ),
+                ),
+                Positioned(
+                  bottom: 0,
+                  right: 0,
+                  child: Container(
+                    padding: const EdgeInsets.all(4),
+                    decoration: const BoxDecoration(
+                      color: AppColors.primaryColor,
+                      shape: BoxShape.circle,
+                    ),
+                    child: const Icon(
+                      Icons.file_upload_outlined,
+                      color: Colors.white,
+                      size: 20,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 12),
+            Text(
+              'Upload profile picture',
+              style: GoogleFonts.poppins(
+                fontSize: 14,
+                color: Colors.grey[600],
+              ),
+            ),
+            const SizedBox(height: 32),
           ],
         ),
       ),
