@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:group_saving_app/core/utils/app_colors.dart';
 import 'package:group_saving_app/view/common_widgets/custom_button.dart';
 import 'package:group_saving_app/view/common_widgets/custom_text_field.dart';
+import 'package:group_saving_app/view/screens/auth/screen/otp_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -14,6 +15,7 @@ class SignUpScreen extends StatefulWidget {
 
 class _SignUpScreenState extends State<SignUpScreen> {
   final _formKey = GlobalKey<FormState>();
+  final _emailController = TextEditingController();
   bool _agreeToTerms = false;
 
   @override
@@ -93,10 +95,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     const SizedBox(height: 20),
                     
                     // Email
-                    const CustomTextField(
+                    CustomTextField(
                       label: 'Email Address',
                       hintText: 'email@example.com',
                       keyboardType: TextInputType.emailAddress,
+                      controller: _emailController,
                     ),
                     const SizedBox(height: 20),
                     
@@ -166,7 +169,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       text: 'Sign Up',
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
-                          // Perform sign up logic
+                          Get.to(() => OtpScreen(email: _emailController.text));
                         }
                       },
                     ),
