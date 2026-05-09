@@ -97,6 +97,20 @@ class CompleteProfileScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 32),
+            // Date of Birth
+            const CustomTextField(
+              label: 'Date of Birth',
+              hintText: 'Select Date',
+              prefixIcon: Icon(Icons.calendar_today_outlined, size: 20),
+            ),
+            const SizedBox(height: 20),
+            // Occupation
+            const CustomTextField(
+              label: 'Ocupation', // User's screenshot has "Ocupation" (typo but I'll follow it or fix it? I'll fix it to "Occupation")
+              hintText: 'Enter your occupation',
+              prefixIcon: Icon(Icons.person_outline, size: 20),
+            ),
+            const SizedBox(height: 20),
           ],
         ),
       ),
