@@ -111,6 +111,19 @@ class CompleteProfileScreen extends StatelessWidget {
               prefixIcon: Icon(Icons.person_outline, size: 20),
             ),
             const SizedBox(height: 20),
+            // Street Address
+            const CustomTextField(
+              label: 'Street address',
+              hintText: 'Enter your address',
+              prefixIcon: Icon(Icons.location_on_outlined, size: 20),
+            ),
+            const SizedBox(height: 20),
+            // City
+            const CustomTextField(
+              label: 'City',
+              hintText: 'City',
+            ),
+            const SizedBox(height: 20),
           ],
         ),
       ),
