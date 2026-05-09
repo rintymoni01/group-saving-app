@@ -124,6 +124,19 @@ class CompleteProfileScreen extends StatelessWidget {
               hintText: 'City',
             ),
             const SizedBox(height: 20),
+            // State
+            const CustomTextField(
+              label: 'State',
+              hintText: 'State',
+            ),
+            const SizedBox(height: 20),
+            // ZIP Code
+            const CustomTextField(
+              label: 'ZIP Code',
+              hintText: 'ZIP',
+              keyboardType: TextInputType.number,
+            ),
+            const SizedBox(height: 32),
           ],
         ),
       ),
