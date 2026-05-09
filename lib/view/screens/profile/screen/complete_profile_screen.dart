@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:group_saving_app/core/utils/app_colors.dart';
+import 'package:group_saving_app/view/common_widgets/custom_button.dart';
+import 'package:group_saving_app/view/common_widgets/custom_text_field.dart';
 
 class CompleteProfileScreen extends StatelessWidget {
   const CompleteProfileScreen({super.key});
@@ -137,6 +139,29 @@ class CompleteProfileScreen extends StatelessWidget {
               keyboardType: TextInputType.number,
             ),
             const SizedBox(height: 32),
+            // Continue Button
+            CustomButton(
+              text: 'Continue',
+              onPressed: () {
+                // Navigate to next screen
+              },
+              borderRadius: 30, // Making it more rounded as per image
+            ),
+            const SizedBox(height: 16),
+            // Skip for now
+            TextButton(
+              onPressed: () {
+                // Skip logic
+              },
+              child: Text(
+                'Skip for now',
+                style: GoogleFonts.poppins(
+                  color: Colors.grey,
+                  fontSize: 14,
+                ),
+              ),
+            ),
+            const SizedBox(height: 24),
           ],
         ),
       ),
