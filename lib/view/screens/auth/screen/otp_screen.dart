@@ -37,6 +37,25 @@ class OtpScreen extends StatelessWidget {
                 size: 32,
               ),
             ),
+            const SizedBox(height: 40),
+            Text(
+              'OTP',
+              style: GoogleFonts.poppins(
+                fontSize: 28,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              'Enter your OTP for reset password',
+              style: GoogleFonts.poppins(
+                fontSize: 16,
+                color: Colors.grey,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 40),
           ],
         ),
       ),
