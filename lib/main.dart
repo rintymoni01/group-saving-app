@@ -17,9 +17,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor),
+        scaffoldBackgroundColor: AppColors.backgroundColor,
         useMaterial3: true,
       ),
-      home: const SignUpScreen(),
+      defaultTransition: Transition.fade,
+      home: SignUpScreen(),
     );
   }
 }
