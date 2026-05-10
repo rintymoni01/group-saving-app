@@ -8,6 +8,7 @@ class OtpController extends GetxController {
   
   var secondsRemaining = 60.obs;
   var canResend = false.obs;
+  var isLoading = false.obs;
   Timer? timer;
 
   @override

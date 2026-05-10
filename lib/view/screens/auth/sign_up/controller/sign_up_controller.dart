@@ -10,6 +10,7 @@ class SignUpController extends GetxController {
   final confirmPasswordController = TextEditingController();
   
   var agreeToTerms = false.obs;
+  var isLoading = false.obs;
 
   void toggleTerms(bool? value) {
     agreeToTerms.value = value ?? false;

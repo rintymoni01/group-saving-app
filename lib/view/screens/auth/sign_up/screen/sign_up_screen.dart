@@ -166,14 +166,18 @@ class SignUpScreen extends StatelessWidget {
                     const SizedBox(height: 30),
                     
                     // Sign Up Button
-                    CustomButton(
+                    Obx(() => CustomButton(
                       text: 'Sign Up',
-                      onPressed: () {
+                      isLoading: controller.isLoading.value,
+                      onPressed: () async {
                         if (controller.formKey.currentState!.validate()) {
+                          controller.isLoading.value = true;
+                          await Future.delayed(const Duration(seconds: 2)); // Simulate api call
+                          controller.isLoading.value = false;
                           Get.to(() => OtpScreen(email: controller.emailController.text));
                         }
                       },
-                    ),
+                    )),
                     const SizedBox(height: 20),
                     
                     // Login Link

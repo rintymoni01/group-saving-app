@@ -104,14 +104,17 @@ class OtpScreen extends StatelessWidget {
             const SizedBox(height: 24),
             
             // Confirm OTP Button
-            CustomButton(
+            Obx(() => CustomButton(
               text: 'Confirm OTP',
-              onPressed: () {
-                // You can access controller.otp here
+              isLoading: controller.isLoading.value,
+              onPressed: () async {
+                controller.isLoading.value = true;
+                await Future.delayed(const Duration(seconds: 2)); // Simulate api call
+                controller.isLoading.value = false;
                 Get.to(() => const CompleteProfileScreen());
               },
               borderRadius: 30,
-            ),
+            )),
             
             const SizedBox(height: 24),
             
