@@ -127,8 +127,14 @@ class OtpScreen extends StatelessWidget {
           border: InputBorder.none,
         ),
         onChanged: (value) {
-          if (value.length == 1 && index < 3) {
-            controller.focusNodes[index + 1].requestFocus();
+          if (value.length == 1) {
+            if (index < 3) {
+              controller.focusNodes[index + 1].requestFocus();
+            } else {
+              // Auto submit when last digit is entered
+              controller.focusNodes[index].unfocus();
+              Get.to(() => const CompleteProfileScreen());
+            }
           } else if (value.isEmpty && index > 0) {
             controller.focusNodes[index - 1].requestFocus();
           }
