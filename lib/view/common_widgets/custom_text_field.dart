@@ -11,6 +11,8 @@ class CustomTextField extends StatefulWidget {
   final String? Function(String?)? validator;
   final Widget? prefixIcon;
 
+  final TextInputAction? textInputAction;
+
   const CustomTextField({
     super.key,
     required this.label,
@@ -20,6 +22,7 @@ class CustomTextField extends StatefulWidget {
     this.keyboardType = TextInputType.text,
     this.validator,
     this.prefixIcon,
+    this.textInputAction,
   });
 
   @override
@@ -48,6 +51,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
           obscureText: widget.isPassword ? _obscureText : false,
           keyboardType: widget.keyboardType,
           validator: widget.validator,
+          textInputAction: widget.textInputAction,
           decoration: InputDecoration(
             hintText: widget.hintText,
             hintStyle: GoogleFonts.poppins(color: AppColors.lightGreyColor),

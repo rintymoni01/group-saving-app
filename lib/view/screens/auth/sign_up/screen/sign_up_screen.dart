@@ -81,11 +81,11 @@ class SignUpScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 30),
                     
-                    // Full Name
                     CustomTextField(
                       label: 'Full Name',
                       hintText: 'John Doe',
                       controller: controller.nameController,
+                      textInputAction: TextInputAction.next,
                     ),
                     const SizedBox(height: 20),
                     
@@ -95,6 +95,8 @@ class SignUpScreen extends StatelessWidget {
                       hintText: 'email@example.com',
                       keyboardType: TextInputType.emailAddress,
                       controller: controller.emailController,
+                      validator: controller.validateEmail,
+                      textInputAction: TextInputAction.next,
                     ),
                     const SizedBox(height: 20),
                     
@@ -104,6 +106,7 @@ class SignUpScreen extends StatelessWidget {
                       hintText: '+1 (555) 000-0000',
                       keyboardType: TextInputType.phone,
                       controller: controller.phoneController,
+                      textInputAction: TextInputAction.next,
                     ),
                     const SizedBox(height: 20),
                     
@@ -113,6 +116,8 @@ class SignUpScreen extends StatelessWidget {
                       hintText: '76543',
                       isPassword: true,
                       controller: controller.passwordController,
+                      validator: controller.validatePassword,
+                      textInputAction: TextInputAction.next,
                     ),
                     const SizedBox(height: 20),
                     
@@ -122,6 +127,8 @@ class SignUpScreen extends StatelessWidget {
                       hintText: '76543',
                       isPassword: true,
                       controller: controller.confirmPasswordController,
+                      validator: controller.validateConfirmPassword,
+                      textInputAction: TextInputAction.done,
                     ),
                     const SizedBox(height: 20),
                     
