@@ -170,6 +170,17 @@ class SignUpScreen extends StatelessWidget {
                       text: 'Sign Up',
                       isLoading: controller.isLoading.value,
                       onPressed: () async {
+                        if (!controller.agreeToTerms.value) {
+                          Get.snackbar(
+                            'Error',
+                            'Please agree to the Terms and Conditions',
+                            snackPosition: SnackPosition.BOTTOM,
+                            backgroundColor: Colors.red.withOpacity(0.8),
+                            colorText: Colors.white,
+                            margin: const EdgeInsets.all(16),
+                          );
+                          return;
+                        }
                         if (controller.formKey.currentState!.validate()) {
                           controller.isLoading.value = true;
                           await Future.delayed(const Duration(seconds: 2)); // Simulate api call
