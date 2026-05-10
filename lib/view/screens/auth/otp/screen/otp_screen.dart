@@ -70,6 +70,39 @@ class OtpScreen extends StatelessWidget {
             
             const SizedBox(height: 40),
             
+            // Resend Timer
+            Obx(() => Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  controller.canResend.value 
+                      ? "Didn't receive code? " 
+                      : "Resend code in ",
+                  style: GoogleFonts.poppins(color: Colors.grey),
+                ),
+                controller.canResend.value
+                    ? GestureDetector(
+                        onTap: controller.resendOtp,
+                        child: Text(
+                          "Resend",
+                          style: GoogleFonts.poppins(
+                            color: AppColors.primaryColor,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      )
+                    : Text(
+                        "00:${controller.secondsRemaining.value.toString().padLeft(2, '0')}",
+                        style: GoogleFonts.poppins(
+                          color: AppColors.primaryColor,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+              ],
+            )),
+            
+            const SizedBox(height: 24),
+            
             // Confirm OTP Button
             CustomButton(
               text: 'Confirm OTP',
