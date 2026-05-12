@@ -10,7 +10,7 @@ class LinkPaymentMethodScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.backgroundColor,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -93,7 +93,7 @@ class LinkPaymentMethodScreen extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: const Color(0xFF1A237E).withOpacity(0.05),
+        color: AppColors.surfaceColor,
         borderRadius: BorderRadius.circular(12),
       ),
       child: Row(
