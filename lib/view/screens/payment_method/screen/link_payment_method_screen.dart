@@ -22,6 +22,20 @@ class LinkPaymentMethodScreen extends StatelessWidget {
         child: Column(
           children: [
             const SizedBox(height: 10),
+            // Wallet Icon
+            Container(
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: const Color(0xFF1A237E).withOpacity(0.1),
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: const Icon(
+                Icons.account_balance_wallet_outlined,
+                color: Color(0xFF1A237E),
+                size: 32,
+              ),
+            ),
+            const SizedBox(height: 24),
           ],
         ),
       ),
