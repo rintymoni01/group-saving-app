@@ -3,7 +3,9 @@ import 'package:get/get.dart';
 import 'package:group_saving_app/view/screens/payment_method/controller/payment_method_controller.dart';
 
 class LinkPaymentMethodScreen extends StatelessWidget {
-  const LinkPaymentMethodScreen({super.key});
+  LinkPaymentMethodScreen({super.key});
+
+  final PaymentMethodController controller = Get.put(PaymentMethodController());
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +19,7 @@ class LinkPaymentMethodScreen extends StatelessWidget {
           onPressed: () => Get.back(),
         ),
       ),
-      body: SingleChildScrollView(
+      body: Obx(() => SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 24),
         child: Column(
           children: [
