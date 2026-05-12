@@ -36,6 +36,14 @@ class LinkPaymentMethodScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 24),
+            Text(
+              'Link your payment method',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
+            ),
           ],
         ),
       ),
