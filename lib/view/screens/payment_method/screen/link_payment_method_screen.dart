@@ -120,6 +120,13 @@ class LinkPaymentMethodScreen extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 24),
+        const CustomTextField(
+          label: 'Routing Number',
+          hintText: 'Enter routing number',
+          keyboardType: TextInputType.number,
+          textInputAction: TextInputAction.next,
+        ),
+        const SizedBox(height: 20),
       ],
     );
   }
