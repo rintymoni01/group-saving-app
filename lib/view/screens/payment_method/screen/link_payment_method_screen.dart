@@ -127,6 +127,13 @@ class LinkPaymentMethodScreen extends StatelessWidget {
           textInputAction: TextInputAction.next,
         ),
         const SizedBox(height: 20),
+        const CustomTextField(
+          label: 'Account Number',
+          hintText: 'Enter account number',
+          keyboardType: TextInputType.number,
+          textInputAction: TextInputAction.done,
+        ),
+        const SizedBox(height: 32),
       ],
     );
   }
