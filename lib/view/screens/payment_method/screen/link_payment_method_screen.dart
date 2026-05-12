@@ -44,6 +44,16 @@ class LinkPaymentMethodScreen extends StatelessWidget {
                 color: Colors.black,
               ),
             ),
+            const SizedBox(height: 8),
+            Text(
+              'Add a bank account or card for\nautomatic contributions',
+              style: TextStyle(
+                fontSize: 16,
+                color: Colors.grey,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 32),
           ],
         ),
       ),
