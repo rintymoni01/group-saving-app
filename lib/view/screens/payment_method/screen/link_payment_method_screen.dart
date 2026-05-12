@@ -56,47 +56,59 @@ class LinkPaymentMethodScreen extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 32),
-            _buildPaymentOption(
-              icon: Icons.account_balance_outlined,
-              title: 'Link Bank Account',
-              onTap: () => controller.toggleBankForm(),
-            ),
-            const SizedBox(height: 16),
-            _buildPaymentOption(
-              icon: Icons.credit_card_outlined,
-              title: 'Add Debit/Credit Card',
-              onTap: () {},
-            ),
-            const SizedBox(height: 24),
-            // Security Note
-            Container(
-              padding: const EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: const Color(0xFF1A237E).withOpacity(0.05),
-                borderRadius: BorderRadius.circular(12),
+            if (!controller.isBankFormVisible.value) ...[
+              _buildPaymentOption(
+                icon: Icons.account_balance_outlined,
+                title: 'Link Bank Account',
+                onTap: () => controller.toggleBankForm(),
               ),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Icon(Icons.lock_outline, size: 16, color: Colors.grey),
-                  const SizedBox(width: 12),
-                  Expanded(
-                    child: Text(
-                      'Your banking information is encrypted and secure. We use bank-level security to protect your data.',
-                      style: TextStyle(
-                        fontSize: 14,
-                        color: Colors.grey.shade700,
-                        height: 1.4,
-                      ),
-                    ),
-                  ),
-                ],
+              const SizedBox(height: 16),
+              _buildPaymentOption(
+                icon: Icons.credit_card_outlined,
+                title: 'Add Debit/Credit Card',
+                onTap: () {},
               ),
-            ),
+              const SizedBox(height: 24),
+              // Security Note
+              _buildSecurityNote(),
+            ] else ...[
+              _buildBankForm(),
+            ],
           ],
         ),
       )),
     );
+  }
+
+  Widget _buildSecurityNote() {
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: const Color(0xFF1A237E).withOpacity(0.05),
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Icon(Icons.lock_outline, size: 16, color: Colors.grey),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Text(
+              'Your banking information is encrypted and secure. We use bank-level security to protect your data.',
+              style: TextStyle(
+                fontSize: 14,
+                color: Colors.grey.shade700,
+                height: 1.4,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildBankForm() {
+    return Container();
   }
 
   Widget _buildPaymentOption({
