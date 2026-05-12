@@ -165,6 +165,7 @@ class LinkPaymentMethodScreen extends StatelessWidget {
           ],
         ),
         const SizedBox(height: 24),
+        _buildSecurityNote(),
       ],
     );
   }
