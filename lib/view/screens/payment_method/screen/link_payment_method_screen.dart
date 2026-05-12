@@ -131,7 +131,7 @@ class LinkPaymentMethodScreen extends StatelessWidget {
         const SizedBox(height: 24),
         CustomTextField(
           label: 'Routing Number',
-          hintText: 'Enter routing number',
+          hintText: 'Enter 9-digit routing number',
           controller: controller.routingController,
           keyboardType: TextInputType.number,
           textInputAction: TextInputAction.next,
