@@ -134,6 +134,28 @@ class LinkPaymentMethodScreen extends StatelessWidget {
           textInputAction: TextInputAction.done,
         ),
         const SizedBox(height: 32),
+        Row(
+          children: [
+            Expanded(
+              child: CustomButton(
+                text: 'Link Account',
+                onPressed: () {},
+                borderRadius: 12,
+              ),
+            ),
+            const SizedBox(width: 16),
+            Expanded(
+              child: CustomButton(
+                text: 'Cancel',
+                onPressed: () => controller.toggleBankForm(),
+                color: Colors.grey.shade200,
+                textColor: Colors.black,
+                borderRadius: 12,
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 24),
       ],
     );
   }
