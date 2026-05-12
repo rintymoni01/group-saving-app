@@ -74,6 +74,15 @@ class LinkPaymentMethodScreen extends StatelessWidget {
             ] else ...[
               _buildBankForm(),
             ],
+            const SizedBox(height: 32),
+            CustomButton(
+              text: 'Skip for now',
+              onPressed: () {},
+              color: Colors.grey.shade200,
+              textColor: Colors.black,
+              borderRadius: 12,
+            ),
+            const SizedBox(height: 24),
           ],
         ),
       )),
