@@ -5,6 +5,8 @@ import 'package:group_saving_app/core/utils/app_colors.dart';
 import 'package:group_saving_app/view/common_widgets/custom_button.dart';
 import 'package:group_saving_app/view/common_widgets/custom_text_field.dart';
 
+import 'package:group_saving_app/view/screens/payment_method/screen/link_payment_method_screen.dart';
+
 class CompleteProfileScreen extends StatelessWidget {
   const CompleteProfileScreen({super.key});
 
@@ -141,10 +143,8 @@ class CompleteProfileScreen extends StatelessWidget {
             const SizedBox(height: 32),
             // Continue Button
             CustomButton(
-              text: 'Continue',
-              onPressed: () {
-                // Navigate to next screen
-              },
+              text: 'Complete Profile',
+              onPressed: () => Get.to(() => const LinkPaymentMethodScreen()),
               borderRadius: 30, // Making it more rounded as per image
             ),
             const SizedBox(height: 16),
