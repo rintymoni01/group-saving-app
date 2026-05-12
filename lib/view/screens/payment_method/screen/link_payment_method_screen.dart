@@ -108,7 +108,20 @@ class LinkPaymentMethodScreen extends StatelessWidget {
   }
 
   Widget _buildBankForm() {
-    return Container();
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text(
+          'Link Bank Account',
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+          ),
+        ),
+        const SizedBox(height: 24),
+      ],
+    );
   }
 
   Widget _buildPaymentOption({
