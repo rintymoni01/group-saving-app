@@ -148,11 +148,12 @@ class LinkPaymentMethodScreen extends StatelessWidget {
         Row(
           children: [
             Expanded(
-              child: CustomButton(
+              child: Obx(() => CustomButton(
                 text: 'Link Account',
-                onPressed: () {},
+                isLoading: controller.isLoading.value,
+                onPressed: () => controller.linkAccount(),
                 borderRadius: 12,
-              ),
+              )),
             ),
             const SizedBox(width: 16),
             Expanded(
