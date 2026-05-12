@@ -11,12 +11,24 @@ class PaymentMethodController extends GetxController {
     isBankFormVisible.value = !isBankFormVisible.value;
   }
 
+  var isLoading = false.obs;
+
   bool validateForm() {
     if (routingController.text.isEmpty || accountController.text.isEmpty) {
       Get.snackbar('Error', 'Please fill all fields');
       return false;
     }
     return true;
+  }
+
+  void linkAccount() async {
+    if (validateForm()) {
+      isLoading.value = true;
+      await Future.delayed(const Duration(seconds: 2));
+      isLoading.value = false;
+      Get.snackbar('Success', 'Bank account linked successfully');
+      toggleBankForm();
+    }
   }
 
   @override
