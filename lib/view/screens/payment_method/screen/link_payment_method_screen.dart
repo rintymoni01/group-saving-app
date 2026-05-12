@@ -17,6 +17,14 @@ class LinkPaymentMethodScreen extends StatelessWidget {
           onPressed: () => Get.back(),
         ),
       ),
+      body: SingleChildScrollView(
+        padding: const EdgeInsets.symmetric(horizontal: 24),
+        child: Column(
+          children: [
+            const SizedBox(height: 10),
+          ],
+        ),
+      ),
     );
   }
 }
