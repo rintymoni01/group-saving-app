@@ -62,6 +62,12 @@ class LinkPaymentMethodScreen extends StatelessWidget {
               onTap: () => controller.toggleBankForm(),
             ),
             const SizedBox(height: 16),
+            _buildPaymentOption(
+              icon: Icons.credit_card_outlined,
+              title: 'Add Debit/Credit Card',
+              onTap: () {},
+            ),
+            const SizedBox(height: 24),
           ],
         ),
       )),
