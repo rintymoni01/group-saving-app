@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:group_saving_app/core/utils/app_colors.dart';
 import 'package:group_saving_app/view/screens/payment_method/controller/payment_method_controller.dart';
+import 'package:group_saving_app/view/widgets/custom_button.dart';
+import 'package:group_saving_app/view/widgets/custom_text_field.dart';
 
 class LinkPaymentMethodScreen extends StatelessWidget {
   LinkPaymentMethodScreen({super.key});
@@ -40,7 +44,7 @@ class LinkPaymentMethodScreen extends StatelessWidget {
             const SizedBox(height: 24),
             Text(
               'Link your payment method',
-              style: TextStyle(
+              style: GoogleFonts.poppins(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
                 color: Colors.black,
@@ -49,7 +53,7 @@ class LinkPaymentMethodScreen extends StatelessWidget {
             const SizedBox(height: 8),
             Text(
               'Add a bank account or card for\nautomatic contributions',
-              style: TextStyle(
+              style: GoogleFonts.poppins(
                 fontSize: 16,
                 color: Colors.grey,
               ),
