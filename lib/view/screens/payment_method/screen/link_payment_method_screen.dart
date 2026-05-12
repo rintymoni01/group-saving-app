@@ -99,14 +99,14 @@ class LinkPaymentMethodScreen extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Icon(Icons.lock_outline, size: 16, color: Colors.grey),
+          const Icon(Icons.lock, size: 18, color: Color(0xFF1A237E)),
           const SizedBox(width: 12),
           Expanded(
             child: Text(
               'Your banking information is encrypted and secure. We use bank-level security to protect your data.',
               style: TextStyle(
                 fontSize: 14,
-                color: Colors.grey.shade700,
+                color: Colors.black87,
                 height: 1.4,
               ),
             ),
