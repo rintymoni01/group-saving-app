@@ -11,6 +11,14 @@ class PaymentMethodController extends GetxController {
     isBankFormVisible.value = !isBankFormVisible.value;
   }
 
+  bool validateForm() {
+    if (routingController.text.isEmpty || accountController.text.isEmpty) {
+      Get.snackbar('Error', 'Please fill all fields');
+      return false;
+    }
+    return true;
+  }
+
   @override
   void onClose() {
     routingController.dispose();
