@@ -8,5 +8,6 @@ class AppColors {
   static const Color fieldBorderColor = Color(0xFFE0E0E0);
   static const Color greyColor = Color(0xFF757575);
   static const Color lightGreyColor = Color(0xFFBDBDBD);
+  static const Color surfaceColor = Color(0xFFF8F9FE);
   static const List<Color> primaryGradient = [Color(0xFF1A237E), Color(0xFF3949AB)];
 }
