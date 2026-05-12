@@ -10,4 +10,11 @@ class PaymentMethodController extends GetxController {
   void toggleBankForm() {
     isBankFormVisible.value = !isBankFormVisible.value;
   }
+
+  @override
+  void onClose() {
+    routingController.dispose();
+    accountController.dispose();
+    super.onClose();
+  }
 }
