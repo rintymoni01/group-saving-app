@@ -108,7 +108,7 @@ class LinkPaymentMethodScreen extends StatelessWidget {
           Expanded(
             child: Text(
               'Your banking information is encrypted and secure. We use bank-level security to protect your data.',
-              style: TextStyle(
+              style: GoogleFonts.poppins(
                 fontSize: 14,
                 color: Colors.black87,
                 height: 1.4,
@@ -126,7 +126,7 @@ class LinkPaymentMethodScreen extends StatelessWidget {
       children: [
         const Text(
           'Link Bank Account',
-          style: TextStyle(
+          style: GoogleFonts.poppins(
             fontSize: 18,
             fontWeight: FontWeight.bold,
             color: Colors.black,
