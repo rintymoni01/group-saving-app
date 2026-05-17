@@ -18,6 +18,14 @@ class PaymentMethodController extends GetxController {
       Get.snackbar('Error', 'Please fill all fields');
       return false;
     }
+    if (routingController.text.length != 9) {
+      Get.snackbar('Error', 'Routing number must be 9 digits');
+      return false;
+    }
+    if (accountController.text.length < 8) {
+      Get.snackbar('Error', 'Account number must be at least 8 digits');
+      return false;
+    }
     return true;
   }
 
