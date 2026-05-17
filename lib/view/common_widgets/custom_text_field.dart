@@ -10,8 +10,8 @@ class CustomTextField extends StatefulWidget {
   final TextInputType keyboardType;
   final String? Function(String?)? validator;
   final Widget? prefixIcon;
-
   final TextInputAction? textInputAction;
+  final int? maxLength;
 
   const CustomTextField({
     super.key,
@@ -23,6 +23,7 @@ class CustomTextField extends StatefulWidget {
     this.validator,
     this.prefixIcon,
     this.textInputAction,
+    this.maxLength,
   });
 
   @override
@@ -52,6 +53,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
           keyboardType: widget.keyboardType,
           validator: widget.validator,
           textInputAction: widget.textInputAction,
+          maxLength: widget.maxLength,
           decoration: InputDecoration(
             hintText: widget.hintText,
             hintStyle: GoogleFonts.poppins(color: AppColors.lightGreyColor),

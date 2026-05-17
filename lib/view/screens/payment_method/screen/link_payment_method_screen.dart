@@ -139,6 +139,7 @@ class LinkPaymentMethodScreen extends StatelessWidget {
           controller: controller.routingController,
           keyboardType: TextInputType.number,
           textInputAction: TextInputAction.next,
+          maxLength: 9,
         ),
         const SizedBox(height: 20),
         CustomTextField(
@@ -147,6 +148,7 @@ class LinkPaymentMethodScreen extends StatelessWidget {
           controller: controller.accountController,
           keyboardType: TextInputType.number,
           textInputAction: TextInputAction.done,
+          maxLength: 17,
         ),
         const SizedBox(height: 32),
         Row(
